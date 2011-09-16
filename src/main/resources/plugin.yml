@@ -1,0 +1,7 @@
+name: OldSkoolTNT
+version: 1.0
+description: A simple plugin that makes tnt ignite when punched, as well as adding the ability to make tnt start fires.
+author: md_5
+website: https://github.com/md-5/OldSkoolTNT
+
+main: com.md_5.oldskooltnt.OldSkoolTNT
