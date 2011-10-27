@@ -41,6 +41,12 @@ public class Config {
         fireTNT = config.getBoolean("fireTNT", fireTNT);
         return fireTNT;
     }
+    public static boolean getInstant() {
+        Configuration config = load();
+        boolean instantTNT = false;
+        instantTNT = config.getBoolean("instantTNT", instantTNT);
+        return instantTNT;
+    }
 
     public static void initConfig() {
         configFile.getParentFile().mkdir();
@@ -63,10 +69,15 @@ public class Config {
             config.setProperty("breakableTools", tempList);
             config.save();
         }
-            if (!config.getKeys().contains("fireTNT")) {
+        if (!config.getKeys().contains("fireTNT")) {
             boolean tempList = true;
             config.setProperty("fireTNT", tempList);
             config.save();
-            }
+        }
+        /*if (!config.getKeys().contains("instantTNT")) {
+            boolean tempList = false;
+            config.setProperty("instantTNT", tempList);
+            config.save();
+        }*/
     }
 }
