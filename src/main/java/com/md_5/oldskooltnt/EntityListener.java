@@ -43,7 +43,7 @@ public class EntityListener extends org.bukkit.event.entity.EntityListener {
 
     @Override
     public void onEntityDamage(EntityDamageEvent event) {
-        if (event.getEntity() instanceof Player && event.getCause().equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION)) {
+        if ((event.getEntity() instanceof Player) && (event.getCause().equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION) && (event.isCancelled()))) {
             Player player = (Player) event.getEntity();         
             player.setHealth(player.getHealth() + event.getDamage());
             event.setCancelled(false);
