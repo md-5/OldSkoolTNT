@@ -17,7 +17,6 @@ public class OldSkoolTNT extends JavaPlugin {
 
         EntityListener entityListener = new EntityListener(this);
         entityListener.registerEvents(pm);
-
         Config.initConfig();
         
         logger.info(String.format("OldSkoolTNT v%1$s enabled", this.getDescription().getVersion()));
